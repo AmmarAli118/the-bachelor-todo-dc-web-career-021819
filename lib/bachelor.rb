@@ -25,7 +25,7 @@ def get_contestant_name(data, occupation)
       contestant_hash.each do |attribute, attribute_value|
           
           if attribute_value == occupation
-            return data[season_num][index]["name"].split.first
+            return data[season_num][index]["name"]
           end
 
       end
