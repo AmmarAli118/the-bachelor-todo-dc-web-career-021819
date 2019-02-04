@@ -80,7 +80,7 @@ def get_average_age_for_season(data, season)
       contestant_hash.each do |attribute, attribute_value|
 
         if attribute == "age" && season_num == season
-          total_age += attribute_value.to_f.floor
+          total_age += attribute_value.to_f
           counter += 1 
         end 
         
@@ -88,5 +88,5 @@ def get_average_age_for_season(data, season)
     end
   end
   
-  return (total_age / counter).ceil
+  return (total_age / counter)
 end
