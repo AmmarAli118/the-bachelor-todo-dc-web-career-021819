@@ -34,7 +34,23 @@ def get_contestant_name(data, occupation)
 end
 
 def count_contestants_by_hometown(data, hometown)
-  # code here
+  counter = 0
+  
+  data.each do |season_num, array_of_hashes|
+    
+    array_of_hashes.each_with_index do |contestant_hash, index|
+     
+      contestant_hash.each do |attribute, attribute_value|
+          
+          if attribute_value == hometown
+            counter += 1
+          end
+
+      end
+    end
+  end
+  
+  return counter
 end
 
 def get_occupation(data, hometown)
