@@ -60,8 +60,8 @@ def get_occupation(data, hometown)
      
       contestant_hash.each do |attribute, attribute_value|
           
-          if season_num == season && attribute_value == "Winner"
-            return data[season_num][index]["name"].split.first
+          if hometown == attribute_value
+            return data[season_num][index]["occupation"]
           end
 
       end
